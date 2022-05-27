@@ -7,6 +7,27 @@ resource "aws_iam_policy" "policy" {
   # Terraform expression result to valid JSON syntax.
   policy = jsonencode({
     Version = "2012-10-17"
-
+    "Statement": [
+      {
+        "Sid": "VisualEditor0",
+        "Effect": "Allow",
+        "Action": [
+          "secretsmanager:GetResourcePolicy",
+          "secretsmanager:GetSecretValue",
+          "secretsmanager:DescribeSecret",
+          "secretsmanager:ListSecretVersionIds"
+        ],
+        "Resource": "arn:aws:secretsmanager:us-east-1:834725375088:secret:dev/roboshop/secrets-dGDJ0Z"
+      },
+      {
+        "Sid": "VisualEditor1",
+        "Effect": "Allow",
+        "Action": [
+          "secretsmanager:GetRandomPassword",
+          "secretsmanager:ListSecrets"
+        ],
+        "Resource": "*"
+      }
+    ]
   })
 }
