@@ -51,6 +51,6 @@ resource "aws_iam_role" "ec2_role" {
   })
 
   tags = {
-    tag-key = "tag-value"
+    tag-key = "ec2_role_for${var.ENV}"
   }
 }
