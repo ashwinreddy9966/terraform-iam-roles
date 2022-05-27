@@ -1,5 +1,5 @@
 resource "aws_iam_policy" "policy" {
-  name        = "aws_secret_manager_for_ec2"
+  name        = "aws_secret_manager_for_ec2_for_roboshop_${var.ENV}"
   path        = "/"
   description = "My test policy"
 
