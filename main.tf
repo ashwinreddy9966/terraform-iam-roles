@@ -54,3 +54,9 @@ resource "aws_iam_role" "ec2_role" {
     tag-key = "ec2_role_for${var.ENV}"
   }
 }
+
+
+resource "aws_iam_role_policy_attachment" "policy-attach-role" {
+  role       = aws_iam_role.ec2_role
+  policy_arn = aws_iam_policy.policy.arn
+}
