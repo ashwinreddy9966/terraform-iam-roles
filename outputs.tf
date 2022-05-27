@@ -1,3 +1,3 @@
 output "INSTANCE_PROFILE_NAME" {
-  value =
+  value = aws_iam_instance_profile.instance_profile.name
 }
