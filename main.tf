@@ -1,5 +1,5 @@
 resource "aws_iam_policy" "policy" {
-  name        = "test_policy"
+  name        = "aws_secret_manager_for_ec2"
   path        = "/"
   description = "My test policy"
 
