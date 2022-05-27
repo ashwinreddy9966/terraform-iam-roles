@@ -61,7 +61,7 @@ resource "aws_iam_role_policy_attachment" "policy-attach-role" {
   policy_arn = aws_iam_policy.policy.arn
 }
 
-resource "aws_iam_instance_profile" "test_profile" {
-  name = "test_profile"
+resource "aws_iam_instance_profile" "instance_profile" {
+  name = "${var.ENV}_instance_profile"
   role = aws_iam_role.role.name
 }
