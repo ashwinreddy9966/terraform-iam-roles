@@ -60,3 +60,8 @@ resource "aws_iam_role_policy_attachment" "policy-attach-role" {
   role       = aws_iam_role.ec2_role.name
   policy_arn = aws_iam_policy.policy.arn
 }
+
+resource "aws_iam_instance_profile" "test_profile" {
+  name = "test_profile"
+  role = aws_iam_role.role.name
+}
