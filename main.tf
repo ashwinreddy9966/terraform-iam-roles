@@ -63,5 +63,5 @@ resource "aws_iam_role_policy_attachment" "policy-attach-role" {
 
 resource "aws_iam_instance_profile" "instance_profile" {
   name = "${var.ENV}_instance_profile"
-  role = aws_iam_role.ec2_role
+  role = aws_iam_role.ec2_role.name 
 }
