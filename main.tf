@@ -17,7 +17,7 @@ resource "aws_iam_policy" "policy" {
           "secretsmanager:DescribeSecret",
           "secretsmanager:ListSecretVersionIds"
         ],
-        "Resource": "arn:aws:secretsmanager:us-east-1:834725375088:secret:dev/roboshop/secrets-dGDJ0Z"
+        "Resource": [ data.aws_secretsmanager_secret_version.secrets.arn ]
       },
       {
         "Sid": "VisualEditor1",
